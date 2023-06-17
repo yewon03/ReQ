@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>로그인 페이지</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+    }
+    .container h2 {
+      text-align: center;
+    }
+    .container input[type="text"],
+    .container input[type="password"] {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      box-sizing: border-box;
+    }
+    .container button {
+      background-color: #b5c1e0;
+      color: rgb(0, 0, 0);
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>로그인</h2>
+    <label for="username"><b>사용자명:</b></label>
+    <input type="text" placeholder="사용자명을 입력하세요" id="username" required>
+    <label for="password"><b>비밀번호:</b></label>
+    <input type="password" placeholder="비밀번호를 입력하세요" id="password" required>
+    <button type="button" onclick="login()">로그인</button>
+  </div>
+
+ 
+</body>
+</html>

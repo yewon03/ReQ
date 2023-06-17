@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>도서 검색</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .search-container {
+            width: 400px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f5f5f5;
+            margin-bottom: 20px;
+            margin-right: 50px;
+        }
+        
+        .search-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-container form {
+            margin-top: 20px;
+        }
+        
+        .search-container label,
+        .search-container select,
+        .search-container input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .best-sellers {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .best-sellers-title {
+            margin-top: 50px;
+            margin-bottom: 30px;
+            font-size: 30pt;
+        }
+
+        .best-title {
+            margin-top: 20px;
+            margin-bottom: 30px;
+            font-size: 15pt;
+        }
+
+        .book {
+            display: inline-block;
+            text-align: center;
+            padding: 10px;
+            margin-right: 30px;
+            margin-bottom: 70px;
+        }
+
+        .book img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <h1>도서 검색</h1>  
+        <form action="/search" method="POST">
+            <label for="grade">학년:</label>
+            <select name="grade" id="grade">
+                <option value="">전체</option>
+                <option value="1">고1</option>
+                <option value="2">고2</option>
+                <option value="3">고3</option>
+                <!-- 다른 학년 옵션들 -->
+            </select>
+
+            <label for="subject">과목:</label>
+            <select name="subject" id="subject">
+                <option value="">전체</option>
+                <option value="Math">수학</option>
+                <option value="Science">국어</option>
+                <option value="English">영어</option>
+                <!-- 다른 과목 옵션들 -->
+            </select>
+
+            <label for="difficulty">난이도:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="">전체</option>
+                <option value="Easy">쉬움</option>
+                <option value="Medium">보통</option>
+                <option value="Hard">어려움</option>
+                <!-- 다른 난이도 옵션들 -->
+            </select>
+
+            <input type="submit" value="검색">
+        </form>
+    </div>
+
+    <div class="best-sellers">
+        <h2 class="best-sellers-title">검색 결과</h2>
+        <h3 class="best-title">고등학교3학년 / 국어 / 고난도</h3>
+
+        <div class="book">
+            <a href="추천도서1.html">
+                <img src="추천도서1.jpg" alt="책 이미지">
+                <p>2024수능 화법과작문</p>
+                <p>18900</p>
+            </a>
+        </div>
+
+        <div class="book">
+            <a href="추천도서2.html">
+                <img src="추천도서2.jpg" alt="책 이미지">
+                <p>2024수능 언어와매체</p>
+                <p>20900</p>
+            </a>
+        </div>
+  
+    </div>
+</body>
+</html>
